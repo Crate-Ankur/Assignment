@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-family:'Roboto', sans-serif;
+    --fweight-100:100;
+    --fweight-400:400;
+    --fweight-700:700;
+    --fweight-900:900;
+    --fcolor:grey;
+    --bg-color:#2fd99b;
+    --border-color:#80e8c2;
+    --logo-color:#009839;
+    
+}
+/* utility classes */
+.container{
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+header #call img{
+    width: 3rem;
+    height: 1rem;
+    position: absolute;
+    right: 4%;
+}
+/* ====for Header======= */
+ /* Header Container */
+#header-container {
+    color: #181717;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.customerservice{
+    display: none;
+}
+  
+  /* Logo */
+#logo {
+    flex: 1; /* Takes up available space */
+    font-weight: bold;
+    font-size: 18px;
+}
+  
+#logo p {
+    margin: 0;
+}
+#logo #headline{
+    color: var(--logo-color);
+}
+  
+/* Burger Icon */
+#burger-icon {
+    flex: 0;
+    margin-right: 20px;
+    font-size: 24px;
+}
+#burger-icon i{
+    color: #009839;
+}
+  /* Logout Button */
+ #logout-button {
+    font-size: 16px;
+    color: #fffafa;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 20%;
+    background-color: var(--bg-color);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px 35px;
+}
+  
+#logout-button:hover {
+    text-decoration: underline;
+}
+
+/* Call Icon */ 
+#call img {
+    max-width: 24px;
+    height: auto;
+    margin-right: 5px;
+}
+#call p {
+    padding-left: 40%;
+}
+  
+  /* Helpline Number */
+ #number {
+    flex: 0;
+    font-size: 16px;
+}
+  
+  /* Helpline Text */
+#number p {
+    margin: 0;
+}
+
+/* Section 1 - Your Details */
+.section1 {
+    text-align: center;
+    padding: 17px;
+    padding-left: 2%;
+    display: flex;
+    justify-content: flex-start;
+    background: #ececec;
+}
+  
+  .section1 img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .section1 h1 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .section1 p {
+    font-size: 16px;
+  }
+  
+  /* Section 2 - Personal Details Form */
+  .section2 {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 43px;
+  }
+
+.form-wrapper{
+    display: flex;
+}
+.form-group {
+    width: 25%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+  
+label {
+    font-weight: bold;
+    color: var(--fcolor);
+}
+  
+input[type="text"] {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom:2px solid var(--border-color);
+    background-color: transparent;
+    outline: none;
+    transition: border-color 0.3s;
+}
+  
+/* Section 3 - Options */
+.section3 {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+  
+.option-container {
+    margin: 10px;
+}
+.option-container p{
+    color: var(--fcolor);
+} 
+button,.option-container #date {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+button:focus{
+    border: 2px solid var(--border-color);
+}
+.option-container #date{
+    border-bottom: 2px solid var(--border-color);
+}
+.location-man{
+    display: none;
+}
+.button-wrapper{
+    display: none;
+}
+.gender-wrapper{
+    display: none;
+}
+  
+/* Section 4 - Address Details */
+.section4 {
+    border-radius: 5px;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.input[type="text"] {
+    width: 48%; /* Adjustment can be made as needed to make it horizontal */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+  /* Additional Styles for hr */
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+.call-to-action-btn #Lbutton{
+    display: inline-block;
+    background-color:var(--bg-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 24px;
+    width: 35%;
+
+}
+
+/* media querry */
+@media (max-width: 768px) {
+  /* Header Container for Mobile */
+  #logo,#logout-button,#call,#number{
+    display:none;
+    flex: none;
+  }
+  .customerservice{
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: var(--logo-color);
+  }
+  .container{
+    margin: 0;
+    padding: 0;
+  }
+
+.section1 {
+    padding: 10px;
+    background-color: white;
+  }
+
+  .section1 img {
+   display: none;
+  }
+
+  .section1 h1 {
+    width: 20rem;
+    background-color: white;
+  }
+
+  .section1 p {
+    display: none;
+  }
+
+  /* Section 2 - Personal Details Form for Mobile */
+  .section2 {
+    margin: 10px;
+  }
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group{
+    width: 100%;
+  }
+  hr{
+    display: none;
+  }
+  input[type="text"] {
+    width: 100%;
+  }
+
+  /* Section 3 - Options for Mobile */
+  .section3 {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .option-container {
+    margin: 10px 0;
+    width: 100%;
+  }
+  .location-man{
+    display: block;
+  }
+  .button-wrapper{
+    display: flex;
+  }
+  .gender-wrapper{
+    display: flex;
+  }
+  .option1,.option2,.option3{
+    display: none;
+  }
+
+  .flight img{
+    width: 30px;
+    height: 30px;
+  }
+  .first-option{
+    margin-right: 10px;
+  }
+  .first-option, .second-option{
+    border: 2px solid var(--border-color);
+  }
+  
+  .first-option1, .second-option1{
+    display: none;
+   
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Section 4 - Address Details for Mobile */
+.input[type="text"] {
+    width: 100%;
+}
+  
+/* Call to Action Button for Mobile */
+.call-to-action-btn #Lbutton {
+    padding: 15px;
+    
+    width: 94%;
+}
+}
